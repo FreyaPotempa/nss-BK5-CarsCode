@@ -1,0 +1,53 @@
+.choices {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.options {
+    display: flex;
+    flex-basis: 30%;
+    flex-flow: column wrap;
+    justify-content: space-between;
+    margin: 25px;
+    background-color: sandybrown;
+    border-radius: 25px;
+    padding: 25px 10px;
+    border: 1px dotted saddlebrown;
+    box-shadow: 5px 10px 10px black;
+}
+
+body {
+    text-align: center;
+}
+
+#orderButton {
+    background-color: saddlebrown;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    display: inline-block;
+    font-size: 16px;
+    font-weight: bold;
+    transition-duration: 0.2s;
+}
+
+#orderButton:hover {
+    background-color: white;
+    color: saddlebrown;
+    border: 1px solid saddlebrown
+}
+
+#orderConfirmation {
+    background-color: rgba(244, 165, 96, 0.509);
+    border: 1px dotted sienna;
+    font-size: 16px;
+}
+
+h1 {
+    font-weight: bold;
+    color: rgb(42, 23, 15);
+    
+}
