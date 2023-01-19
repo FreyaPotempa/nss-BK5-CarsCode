@@ -20,9 +20,17 @@ export const paintOptions = () => {
     html += '<select id="paint">'
     html += '<option value="0">Select a Paint Color</option>'
 
-    const listItems = paints.map(paint => {
-        return `<option value="${paint.id}"> ${paint.color}</option>`
+    // destructuring objects creating new variables accessing keys from K
+    const listItems = paints.map(({id, color}) => {
+        return `<option value="${id}"> ${color}</option>`
     })
+    // const listItems = paints.map(paint => {
+    //     const { id, color } = paint;
+    //     return `<option value="${id}"> ${color}</option>`
+    // })
+    // const listItems = paints.map(paint => {
+    //     return `<option value="${paint.id}"> ${paint.color}</option>`
+    // })
 
     html += listItems.join("")
     html += "</select>"

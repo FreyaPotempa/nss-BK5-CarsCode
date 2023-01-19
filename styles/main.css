@@ -34,7 +34,12 @@ body {
     transition-duration: 0.2s;
 }
 
-#orderButton:hover {
+#orderButton:disabled {
+    background-color: gray;
+    color: rgb(91, 91, 91)
+}
+
+#orderButton:hover:enabled {
     background-color: white;
     color: saddlebrown;
     border: 1px solid saddlebrown
@@ -44,6 +49,7 @@ body {
     background-color: rgba(244, 165, 96, 0.509);
     border: 1px dotted sienna;
     font-size: 16px;
+    margin-top: 5px;
 }
 
 h1 {

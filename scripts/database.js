@@ -1,3 +1,5 @@
+import { renderAllHTML } from "./main.js"
+
 const database = {
     orderBuilder: {},
     paints: [
@@ -72,6 +74,15 @@ export const setWheel = (id) => {
     database.orderBuilder.wheelId = id
 }
 
+export const isButtonDisabled = () => {
+    const btnSubmit = document.getElementById("orderButton")
+    if (Object.keys(database.orderBuilder).length < 4) {
+        btnSubmit.disabled = true
+    } else {
+        btnSubmit.disabled = false
+    }
+}
+
 export const addCustomOrder = () => {
     const newOrder = {...database.orderBuilder}
 
@@ -84,5 +95,7 @@ export const addCustomOrder = () => {
 
     database.orderBuilder = {}
 
-    document.dispatchEvent(new CustomEvent("stateChanged"))
+    renderAllHTML()
+
+   // document.dispatchEvent(new CustomEvent("stateChanged"))
 }

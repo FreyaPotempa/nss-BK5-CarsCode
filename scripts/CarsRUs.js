@@ -3,7 +3,7 @@ import { interiorOptions } from "./Interiors.js";
 import { technologyOptions } from "./Technologies.js";
 import { wheelOptions } from "./Wheels.js";
 import { Orders } from "./Orders.js";
-import { addCustomOrder } from "./database.js";
+import { addCustomOrder, isButtonDisabled } from "./database.js";
 
 document.addEventListener(
     "click",
@@ -11,6 +11,13 @@ document.addEventListener(
         if (click.target.id === "orderButton") {
             addCustomOrder()
         }
+    }
+)
+
+document.addEventListener(
+    "change",
+    () => {
+        isButtonDisabled()
     }
 )
 
